@@ -130,7 +130,7 @@ export default function Navbar({ onOpenSearch, isMobileOpen, onOpenMenu, onClose
               href="https://www.instagram.com/sakhimangalore"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.iconBtn}
+              className={`${styles.iconBtn} ${styles.desktopOnlyHeaderIcon}`}
               title="Instagram @sakhimangalore"
               aria-label="Instagram Profile"
             >
@@ -141,7 +141,7 @@ export default function Navbar({ onOpenSearch, isMobileOpen, onOpenMenu, onClose
               href="https://maps.app.goo.gl/CGWejDU5BuJXF7Xx9?g_st=ipc"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.iconBtn}
+              className={`${styles.iconBtn} ${styles.desktopOnlyHeaderIcon}`}
               title="Visit Boutique on Google Maps"
               aria-label="Store Location"
             >

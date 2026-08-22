@@ -177,5 +177,32 @@
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 3.5rem 1rem 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .lead {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .colTitle {
+    font-size: 1.65rem;
+  }
+
+  .formBox {
+    padding: 1.5rem 1.25rem;
   }
 }

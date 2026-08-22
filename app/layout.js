@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import './globals.css';
 import Navbar from '@/components/Navbar';
-import BottomNav from '@/components/BottomNav';
 import Footer from '@/components/Footer';
 import SearchBar from '@/components/SearchBar';
 import SEO from '@/components/SEO';
@@ -36,10 +35,6 @@ export default function RootLayout({ children }) {
         />
         <main>{children}</main>
         <Footer />
-        <BottomNav 
-          onOpenSearch={() => setSearchOpen(true)} 
-          onOpenMenu={() => setMobileMenuOpen(true)}
-        />
         <SearchBar isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       </body>
     </html>

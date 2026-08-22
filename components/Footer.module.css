@@ -127,8 +127,8 @@
 /* ==================================================== */
 @media (max-width: 768px) {
   .footer {
-    padding-top: 1.25rem;
-    padding-bottom: 5.25rem; /* Space for mobile bottom navigation bar */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     border-top: 1px solid rgba(212, 175, 55, 0.25);
   }
 

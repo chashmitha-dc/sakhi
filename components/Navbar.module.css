@@ -324,18 +324,22 @@
     height: 36px;
   }
 
+  .desktopOnlyHeaderIcon {
+    display: none;
+  }
+
   .logoEmblemWrapper {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     padding: 3px;
   }
 
   .logoTitle {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .logoTagline {
-    font-size: 0.5rem;
-    letter-spacing: 0.2em;
+    font-size: 0.48rem;
+    letter-spacing: 0.18em;
   }
 }
