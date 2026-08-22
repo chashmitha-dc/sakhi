@@ -1,0 +1,95 @@
+.bottomNavContainer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottomNavContainer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-border-gold);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    padding: 0.35rem 0.5rem calc(0.35rem + env(safe-area-inset-bottom));
+  }
+
+  .bottomNavGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .navItemLink, .navItemBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.2rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    transition: color var(--transition-fast);
+  }
+
+  .activeNavItem {
+    color: var(--color-gold) !important;
+  }
+
+  .activeNavItem .icon {
+    transform: translateY(-1px);
+    color: var(--color-gold);
+  }
+
+  .icon {
+    transition: transform var(--transition-fast), color var(--transition-fast);
+  }
+
+  .label {
+    font-family: var(--font-body);
+    font-size: 0.675rem;
+    font-weight: 500;
+    margin-top: 3px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .wishlistToast {
+    position: fixed;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1600;
+    background: var(--color-dark-brown-deep);
+    color: var(--color-white);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border-gold);
+    animation: fadeInBottom 0.25s ease-out;
+  }
+
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 10px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}

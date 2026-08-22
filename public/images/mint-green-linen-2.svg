@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8FBC8F" />
+      <stop offset="100%" stop-color="#8FBC8F" stop-opacity="0.88" />
+    </linearGradient>
+    <linearGradient id="gold-zari" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#99701E" />
+      <stop offset="30%" stop-color="#FFD700" />
+      <stop offset="70%" stop-color="#C89B3C" />
+      <stop offset="100%" stop-color="#805C15" />
+    </linearGradient>
+    <pattern id="motif" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M40 10 L50 30 L70 40 L50 50 L40 70 L30 50 L10 40 L30 30 Z" fill="#F5FEED" opacity="0.15" />
+      <circle cx="40" cy="40" r="6" fill="#5C3A21" opacity="0.3" />
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fabric Canvas Background -->
+  <rect width="800" height="1000" fill="url(#bg-grad)" />
+  <rect width="800" height="1000" fill="url(#motif)" />
+
+  <!-- Zari Border Top & Bottom -->
+  <rect x="0" y="0" width="800" height="50" fill="url(#gold-zari)" />
+  <rect x="0" y="950" width="800" height="50" fill="url(#gold-zari)" />
+
+  <!-- Side Heavy Zari Border (Pallu) -->
+  <rect x="700" y="0" width="100" height="1000" fill="url(#gold-zari)" opacity="0.9" />
+
+  <!-- Decorative Border Patterns -->
+  <g stroke="#F5FEED" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M0,60 Q400,90 800,60 M0,940 Q400,910 800,940" />
+    <circle cx="750" cy="200" r="30" fill="none" stroke="#FFFFFF" opacity="0.4" />
+    <circle cx="750" cy="500" r="40" fill="none" stroke="#FFFFFF" opacity="0.4" />
+    <circle cx="750" cy="800" r="30" fill="none" stroke="#FFFFFF" opacity="0.4" />
+  </g>
+
+  <!-- Central Draped Silhouette Artwork -->
+  <g transform="translate(150, 150)">
+    <!-- Pleats Lines -->
+    <path d="M 100 650 Q 250 150 400 650 M 150 650 Q 250 200 350 650 M 200 650 Q 250 250 300 650" 
+          stroke="#5C3A21" stroke-width="4" fill="none" opacity="0.4" />
+
+    <!-- Center Emblem Mandala -->
+    <circle cx="250" cy="320" r="110" fill="none" stroke="url(#gold-zari)" stroke-width="6" filter="url(#glow)" />
+    <circle cx="250" cy="320" r="90" fill="none" stroke="#F5FEED" stroke-width="2" stroke-dasharray="8 6" opacity="0.8" />
+    <circle cx="250" cy="320" r="60" fill="#5C3A21" opacity="0.2" />
+
+    <!-- Brand Typography inside Graphic -->
+    <text x="250" y="315" font-family="Playfair Display, Georgia, serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">SAKHI</text>
+    <text x="250" y="340" font-family="Poppins, sans-serif" font-size="12" font-weight="500" fill="#5C3A21" text-anchor="middle" letter-spacing="4">MANGALORE</text>
+  </g>
+
+  <!-- Luxury Overlay Frame -->
+  <rect x="25" y="25" width="750" height="950" fill="none" stroke="url(#gold-zari)" stroke-width="2" opacity="0.7" />
+
+  <!-- Label Badge -->
+  <rect x="50" y="860" width="400" height="60" rx="8" fill="#000000" opacity="0.4" />
+  <text x="70" y="895" font-family="Playfair Display, Georgia, serif" font-size="20" font-weight="600" fill="#FFFFFF">Mint Linen Saree with Zari Pallu</text>
+  <text x="70" y="910" font-family="Poppins, sans-serif" font-size="11" font-weight="400" fill="#5C3A21">Detail Angle 2</text>
+</svg>

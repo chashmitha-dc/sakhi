@@ -1,0 +1,30 @@
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1.25rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--color-gold-light);
+  border-top-color: var(--color-gold);
+  border-radius: var(--radius-full);
+  animation: spin 1s infinite linear;
+}
+
+.brandText {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-brown-deep);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

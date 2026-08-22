@@ -1,0 +1,117 @@
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mainViewer {
+  position: relative;
+  width: 100%;
+  padding-top: 125%; /* 4:5 ratio */
+  background: var(--color-cream-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+.videoPlayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.videoControlsOverlay {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 5;
+}
+
+.controlBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.controlBtn:hover {
+  background: var(--color-gold);
+  color: var(--color-dark-brown-deep);
+}
+
+.thumbnailGrid {
+  display: flex;
+  gap: 0.85rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.thumbBtn {
+  position: relative;
+  width: 85px;
+  height: 105px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+  background: var(--color-cream-light);
+  transition: all var(--transition-fast);
+}
+
+.activeThumb {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.thumbImage {
+  object-fit: cover;
+}
+
+.videoThumbBadge {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-light);
+}
+
+@media (max-width: 768px) {
+  .galleryContainer {
+    gap: 0.4rem;
+  }
+
+  .mainViewer {
+    padding-top: 133.33%; /* 3:4 ratio */
+    border-radius: var(--radius-sm);
+  }
+
+  .thumbnailGrid {
+    gap: 0.35rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .thumbBtn {
+    width: 36px;
+    height: 46px;
+    border-width: 1px;
+  }
+}

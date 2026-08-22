@@ -1,0 +1,224 @@
+.section {
+  background-color: var(--color-bg-luxury, #FAF7F2);
+  padding: 5.5rem 0;
+  border-bottom: 1px solid var(--color-border, #EAE2D8);
+}
+
+.container {
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.storyBlock {
+  margin-bottom: 0;
+}
+
+.storyHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTag {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold, #C9A14A);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep, #2A1B12);
+  margin-bottom: 1rem;
+}
+
+.goldLine {
+  width: 60px;
+  height: 2px;
+  background: var(--color-gold, #C9A14A);
+  margin: 0 auto;
+}
+
+/* DESKTOP LAYOUT: Image on Left, Text on Right */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.storyImageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.imageBorderFrame {
+  position: relative;
+  border-radius: var(--radius-md, 16px);
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 16px 40px rgba(42, 27, 18, 0.12);
+}
+
+.storyImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.storyImg:hover {
+  transform: scale(1.02);
+}
+
+.storyTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.leadParagraph {
+  font-family: var(--font-subheading, 'Playfair Display', Georgia, serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--color-dark-brown-deep, #2A1B12);
+  line-height: 1.6;
+  font-style: italic;
+  border-left: 3px solid var(--color-gold, #C9A14A);
+  padding-left: 1.25rem;
+}
+
+.bodyParagraph {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 1.05rem;
+  color: var(--color-charcoal, #4A3B32);
+  line-height: 1.8;
+}
+
+/* Read More Gold Text Button */
+.readMoreWrapper {
+  margin-top: 0.5rem;
+}
+
+.readMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gold, #C9A14A);
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  color: #B58D38;
+  transform: translateX(4px);
+}
+
+/* ==================================================== */
+/* MOBILE REDESIGN (max-width: 768px)                    */
+/* ==================================================== */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .storyHeader {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .sectionTag {
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    margin-bottom: 6px;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .goldLine {
+    width: 50px;
+    height: 2px;
+  }
+
+  /* MOBILE LAYOUT: Heading -> Large Image -> Text -> Read More */
+  .storyGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .storyImageWrapper {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .imageBorderFrame {
+    border-radius: 20px;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 12px 32px rgba(42, 27, 18, 0.12);
+  }
+
+  .storyImg {
+    border-radius: 17px;
+    width: 100%;
+    height: auto;
+  }
+
+  .storyTextContent {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .leadParagraph {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2A1B12;
+    font-style: normal;
+    border-left: 2px solid var(--color-gold, #C9A14A);
+    padding-left: 14px;
+    margin: 0;
+  }
+
+  .bodyParagraph {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4A3B32;
+    margin: 0;
+  }
+
+  .readMoreWrapper {
+    margin-top: 4px;
+  }
+
+  .readMoreBtn {
+    font-size: 16px;
+    gap: 6px;
+    color: var(--color-gold, #C9A14A);
+    font-weight: 600;
+  }
+}

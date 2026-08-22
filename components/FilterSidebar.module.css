@@ -1,0 +1,150 @@
+.sidebar {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resetBtn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity var(--transition-fast);
+}
+
+.resetBtn:hover {
+  text-decoration: underline;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.groupLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-dark-brown);
+  text-transform: uppercase;
+}
+
+.priceRangeInputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.priceSlider {
+  width: 100%;
+  accent-color: var(--color-gold);
+  cursor: pointer;
+}
+
+.priceLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-dark-brown);
+}
+
+/* Swatches */
+.colourGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.colourSwatch {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.colourSwatch:hover {
+  transform: scale(1.15);
+}
+
+.selectedSwatch {
+  border-color: var(--color-dark-brown-deep);
+  box-shadow: 0 0 0 2px var(--color-gold);
+}
+
+/* Checkboxes */
+.checkboxList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--color-dark-brown);
+  cursor: pointer;
+  user-select: none;
+}
+
+.customCheckbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--color-border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.checkedCheckbox {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.selectInput {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-gold);
+  background: var(--color-cream-light);
+  color: var(--color-dark-brown-deep);
+  font-size: 0.875rem;
+}

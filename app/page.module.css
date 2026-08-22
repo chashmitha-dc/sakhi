@@ -1,0 +1,121 @@
+.section {
+  padding: 5.5rem 0;
+}
+
+.creamBg {
+  background: var(--color-cream, #FAF7F2);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold, #C9A14A);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep, #2A1B12);
+  margin-bottom: 0.65rem;
+}
+
+.sectionDesc {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 1rem;
+  color: var(--color-charcoal, #4A3B32);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.swipeHint {
+  display: none;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* ==================================================== */
+/* MOBILE HORIZONTAL SWIPE CAROUSEL (max-width: 768px)  */
+/* ==================================================== */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0 2.5rem 0;
+  }
+
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Reduced bottom spacing */
+  }
+
+  .sectionSubtitle {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.35rem;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  .sectionDesc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #4A3B32;
+    max-width: 92%;
+    margin: 0 auto 0.5rem auto;
+  }
+
+  /* Mobile-only Swipe Hint */
+  .swipeHint {
+    display: inline-block !important;
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--color-gold, #C9A14A);
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  /* Horizontal Swipe Container with CSS Scroll Snap */
+  .categoryGrid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0.25rem 20px 1.5rem 20px;
+    margin: 0 -20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+
+  .categoryGrid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+  }
+}

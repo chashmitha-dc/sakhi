@@ -1,0 +1,246 @@
+.footer {
+  background: var(--color-dark-brown-deep, #1A0F0A);
+  color: var(--color-white, #FFFFFF);
+  padding-top: 4.5rem;
+  padding-bottom: 2.25rem;
+  border-top: 1px solid var(--color-border-gold, #C9A14A);
+}
+
+.desktopOnly {
+  display: block;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logoTitle {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-gold-light, #F5E6C8);
+}
+
+.logoTagline {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-gold, #C9A14A);
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.colTitle {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-gold-light, #F5E6C8);
+  margin-bottom: 1.25rem;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-gold, #C9A14A);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.socialRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  background: var(--color-gold, #C9A14A);
+  color: #1A0F0A;
+}
+
+/* ==================================================== */
+/* ULTRA-COMPACT LUXURY MOBILE FOOTER (180–220px)       */
+/* Contains strictly 4 elements without scrolling!      */
+/* ==================================================== */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 1.25rem;
+    padding-bottom: 5.25rem; /* Space for mobile bottom navigation bar */
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+  }
+
+  .desktopOnly {
+    display: none !important;
+  }
+
+  .mobileOnly {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 0 1rem;
+  }
+
+  /* 1. Small Centered Logo Group */
+  .mobileLogoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .mobileLogoCircle {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 4px;
+    border: 1px solid #D4AF37;
+    margin-bottom: 0.15rem;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+  }
+
+  .mobileLogoTitle {
+    font-family: 'Playfair Display', Cormorant Garamond, Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #F5E6C8;
+    line-height: 1;
+  }
+
+  .mobileLogoTag {
+    font-size: 0.55rem;
+    letter-spacing: 0.28em;
+    color: #D4AF37;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* 2. Instagram & WhatsApp Icons */
+  .mobileSocialRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.1rem 0;
+  }
+
+  .mobileSocialLink {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #F5E6C8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .mobileSocialLink:hover {
+    background: #D4AF37;
+    color: #1A0F0A;
+  }
+
+  /* 3. One Button: Visit Boutique */
+  .mobileVisitBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    height: 38px;
+    padding: 0 1.25rem;
+    background: transparent;
+    border: 1.2px solid #D4AF37;
+    color: #F5E6C8;
+    border-radius: 9999px;
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0.1rem 0;
+  }
+
+  .mobileVisitBtn:hover {
+    background: rgba(212, 175, 55, 0.15);
+    color: #FFFFFF;
+  }
+
+  /* 4. Copyright */
+  .mobileCopyright {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.1rem;
+    letter-spacing: 0.02em;
+  }
+}

@@ -1,0 +1,74 @@
+.quoteSection {
+  background-color: var(--color-cream);
+  padding: 4.5rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quoteCard {
+  background: var(--color-cream-light);
+  padding: 3.5rem 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-gold);
+  box-shadow: 0 12px 35px rgba(78, 52, 46, 0.05);
+  position: relative;
+}
+
+.flourishTop {
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.quoteText {
+  font-family: var(--font-subheading);
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-dark-brown-deep);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.line {
+  height: 1px;
+  width: 60px;
+  background: var(--color-gold);
+  opacity: 0.6;
+}
+
+.author {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--color-accent-brown);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .quoteSection {
+    padding: 3rem 1rem;
+  }
+  .quoteCard {
+    padding: 2.25rem 1.25rem;
+  }
+  .quoteText {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}

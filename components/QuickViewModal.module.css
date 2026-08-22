@@ -1,0 +1,239 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 16, 8, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 1060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  background: var(--color-white);
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-gold);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.detailsCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.codeTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-maroon);
+}
+
+.oldPrice {
+  font-size: 1rem;
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--color-dark-brown);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.specsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.specLabel {
+  color: var(--color-muted);
+}
+
+.specVal {
+  font-weight: 600;
+  color: var(--color-dark-brown-deep);
+}
+
+.actionStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.whatsappBtn {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: var(--color-white);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.fullPageBtn {
+  background: var(--color-cream);
+  border: 1px solid var(--color-border-gold);
+  color: var(--color-dark-brown);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .backdrop {
+    padding: 0.5rem;
+  }
+
+  .modal {
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+
+  .closeBtn {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 28px;
+    height: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 135px 1fr;
+    gap: 0.65rem;
+    padding: 0.75rem;
+  }
+
+  .codeTag {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.15rem;
+  }
+
+  .title {
+    font-size: 0.925rem;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .priceRow {
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .oldPrice {
+    font-size: 0.8rem;
+  }
+
+  .desc {
+    font-size: 0.725rem;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .specsList {
+    gap: 0.2rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .actionStack {
+    gap: 0.4rem;
+  }
+
+  .whatsappBtn {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.775rem;
+    border-radius: var(--radius-full);
+    gap: 0.35rem;
+  }
+
+  .fullPageBtn {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.725rem;
+    border-radius: var(--radius-full);
+  }
+}

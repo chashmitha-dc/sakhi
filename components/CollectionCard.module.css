@@ -1,0 +1,120 @@
+.cardLink {
+  display: block;
+  text-decoration: none;
+}
+
+.cardContainer {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardContainer:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
+}
+
+.imageBox {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-dark-brown);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardContainer:hover .image {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%);
+}
+
+.tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-gold);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.infoBox {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.headerRow {
+  margin-bottom: 0.6rem;
+}
+
+.metaText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep);
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.btnRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-dark-brown);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.arrowIcon {
+  transition: transform var(--transition-fast);
+}
+
+.cardContainer:hover .btnRow {
+  color: var(--color-maroon);
+}
+
+.cardContainer:hover .arrowIcon {
+  transform: translateX(6px);
+}

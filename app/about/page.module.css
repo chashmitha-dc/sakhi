@@ -1,0 +1,165 @@
+.heroHeader {
+  background: var(--color-dark-brown-deep);
+  color: var(--color-white);
+  padding: 6rem 0 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.creamBg {
+  background: var(--color-cream);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep);
+  margin-bottom: 1.25rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.storyImageWrapper {
+  position: relative;
+  height: 520px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-gold);
+}
+
+.storyImage {
+  object-fit: cover;
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.missionCard {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 3rem 2.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardTag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-dark-brown-deep);
+  margin-bottom: 1rem;
+}
+
+.cardDesc {
+  font-size: 0.975rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 2px solid var(--color-gold);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -2.6rem;
+  top: 0.2rem;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold);
+  border: 4px solid var(--color-cream);
+}
+
+.timelineYear {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-maroon);
+  margin-bottom: 0.4rem;
+}
+
+.timelineTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-dark-brown-deep);
+  margin-bottom: 0.5rem;
+}
+
+.timelineText {
+  font-size: 0.925rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .storyGrid, .missionGrid {
+    grid-template-columns: 1fr;
+  }
+}
