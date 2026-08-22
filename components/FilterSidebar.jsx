@@ -72,24 +72,6 @@ export default function FilterSidebar({
         </button>
       </div>
 
-      {/* Price Slider */}
-      <div className={styles.filterGroup}>
-        <label className={styles.groupLabel}>Price Range</label>
-        <input
-          type="range"
-          min="5000"
-          max="90000"
-          step="1000"
-          value={filters.maxPrice || 90000}
-          onChange={(e) => onFilterChange('maxPrice', Number(e.target.value))}
-          className={styles.priceSlider}
-        />
-        <div className={styles.priceLabels}>
-          <span>Min: ₹5,000</span>
-          <span>Max: ₹{(filters.maxPrice || 90000).toLocaleString('en-IN')}</span>
-        </div>
-      </div>
-
       {/* Colour Filter */}
       <div className={styles.filterGroup}>
         <label className={styles.groupLabel}>Colour Swatches</label>

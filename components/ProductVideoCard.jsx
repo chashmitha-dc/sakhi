@@ -54,7 +54,6 @@ export default function ProductVideoCard({ product }) {
 
         <div className={styles.bottomContent}>
           <h3 className={styles.title}>{product.name}</h3>
-          <p className={styles.price}>₹{product.price.toLocaleString('en-IN')}</p>
 
           <div className={styles.actions}>
             <Link href={`/product/${product.id}`} className={styles.viewBtn}>

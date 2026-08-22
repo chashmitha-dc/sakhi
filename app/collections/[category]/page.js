@@ -24,7 +24,6 @@ export default function CategoryPage({ params }) {
 
   // Filter State
   const [filters, setFilters] = useState({
-    maxPrice: 90000,
     colour: '',
     collection: currentCollection ? currentCollection.slug : '',
     materials: [],
@@ -46,7 +45,6 @@ export default function CategoryPage({ params }) {
 
   const handleResetFilters = () => {
     setFilters({
-      maxPrice: 90000,
       colour: '',
       collection: '',
       materials: [],
@@ -59,7 +57,6 @@ export default function CategoryPage({ params }) {
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
-    if (filters.maxPrice < 90000) count++;
     if (filters.colour) count++;
     if (filters.collection) count++;
     if (filters.materials.length > 0) count += filters.materials.length;
@@ -77,9 +74,6 @@ export default function CategoryPage({ params }) {
           return false;
         }
       }
-
-      // Max price slider
-      if (item.price > filters.maxPrice) return false;
 
       // Colour swatch
       if (filters.colour && !item.colour.toLowerCase().includes(filters.colour.toLowerCase())) {
@@ -126,8 +120,6 @@ export default function CategoryPage({ params }) {
 
       return true;
     }).sort((a, b) => {
-      if (sortOption === 'low-to-high') return a.price - b.price;
-      if (sortOption === 'high-to-low') return b.price - a.price;
       if (sortOption === 'newest') return (b.newArrival ? 1 : 0) - (a.newArrival ? 1 : 0);
       if (sortOption === 'popular') return b.rating - a.rating;
       return (b.featured ? 1 : 0) - (a.featured ? 1 : 0); // 'featured'
@@ -138,8 +130,6 @@ export default function CategoryPage({ params }) {
     { label: 'Featured', value: 'featured' },
     { label: 'Newest Arrivals', value: 'newest' },
     { label: 'Most Popular', value: 'popular' },
-    { label: 'Price: Low to High', value: 'low-to-high' },
-    { label: 'Price: High to Low', value: 'high-to-low' },
   ];
 
   return (
@@ -229,8 +219,6 @@ export default function CategoryPage({ params }) {
                   className={styles.sortSelect}
                 >
                   <option value="featured">Featured First</option>
-                  <option value="low-to-high">Price: Low to High</option>
-                  <option value="high-to-low">Price: High to Low</option>
                   <option value="newest">Newest Arrivals</option>
                   <option value="popular">Most Popular</option>
                 </select>
@@ -253,7 +241,7 @@ export default function CategoryPage({ params }) {
               <div className={styles.noProducts}>
                 <h3 className={styles.noProductsTitle}>No Sarees Match Your Filter Criteria</h3>
                 <p className={styles.noProductsDesc}>
-                  Try adjusting your price range, colour selections, or material options.
+                  Try adjusting your colour selections, material options, or availability.
                 </p>
                 <button onClick={handleResetFilters} className={styles.resetBtn}>
                   Reset All Filters

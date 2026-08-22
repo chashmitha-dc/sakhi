@@ -34,9 +34,9 @@ export default function ProductDetailPage({ params }) {
 
   const handleWhatsAppEnquiry = () => {
     const msg = encodeURIComponent(
-      `Hello Sakhi Mangalore!\n\nI want to inquire about the following saree from your digital catalogue:\n\n*${product.name}*\n*Product Code:* ${product.productCode}\n*Price:* ₹${product.price.toLocaleString('en-IN')}\n*Fabric:* ${product.fabric}\n*Colour:* ${product.colour}\n\nPlease let me know the current availability and order process.`
+      `Hello Sakhi Mangalore!\n\nI want to inquire about the following saree from your digital catalogue:\n\n*${product.name}*\n*Product Code:* ${product.productCode}\n*Fabric:* ${product.fabric}\n*Colour:* ${product.colour}\n\nPlease let me know the current availability and order process.`
     );
-    window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
+    window.open(`https://wa.me/919480168999?text=${msg}`, '_blank');
   };
 
   const handleShare = () => {
@@ -67,13 +67,6 @@ export default function ProductDetailPage({ params }) {
     "brand": {
       "@type": "Brand",
       "name": "Sakhi Mangalore"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": `https://sakhimangalore.com/product/${product.id}`,
-      "priceCurrency": "INR",
-      "price": product.price,
-      "availability": "https://schema.org/InStock"
     }
   };
 
@@ -104,17 +97,6 @@ export default function ProductDetailPage({ params }) {
           <div>
             <div className={styles.productCode}>Product Code: {product.productCode}</div>
             <h1 className={styles.title}>{product.name}</h1>
-
-            {/* Price Block */}
-            <div className={styles.priceBlock}>
-              <span className={styles.currentPrice}>₹{product.price.toLocaleString('en-IN')}</span>
-              {product.oldPrice && (
-                <span className={styles.oldPrice}>₹{product.oldPrice.toLocaleString('en-IN')}</span>
-              )}
-              {product.discount > 0 && (
-                <span className={styles.discountBadge}>{product.discount}% OFF</span>
-              )}
-            </div>
 
             <p className={styles.desc}>{product.description}</p>
 

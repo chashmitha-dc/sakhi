@@ -154,7 +154,6 @@ export default function SearchBar({ isOpen, onClose }) {
                       <h4 className={styles.name}>{product.name}</h4>
                       <p className={styles.meta}>{product.fabric} • {product.category}</p>
                     </div>
-                    <span className={styles.price}>₹{product.price.toLocaleString('en-IN')}</span>
                     <ArrowRight size={16} color="#8C827A" />
                   </Link>
                 ))}

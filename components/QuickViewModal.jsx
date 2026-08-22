@@ -11,8 +11,8 @@ export default function QuickViewModal({ product, onClose }) {
   if (!product) return null;
 
   const handleWhatsApp = () => {
-    const msg = encodeURIComponent(`Hello Sakhi Mangalore! I would like to enquire about "${product.name}" (Code: ${product.productCode}) priced at ₹${product.price.toLocaleString('en-IN')}. Please let me know the availability.`);
-    window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
+    const msg = encodeURIComponent(`Hello Sakhi Mangalore! I would like to enquire about "${product.name}" (Code: ${product.productCode}). Please let me know the availability.`);
+    window.open(`https://wa.me/919480168999?text=${msg}`, '_blank');
   };
 
   return (
@@ -45,13 +45,6 @@ export default function QuickViewModal({ product, onClose }) {
             <div className={styles.detailsCol}>
               <span className={styles.codeTag}>Code: {product.productCode}</span>
               <h2 className={styles.title}>{product.name}</h2>
-
-              <div className={styles.priceRow}>
-                <span className={styles.price}>₹{product.price.toLocaleString('en-IN')}</span>
-                {product.oldPrice && (
-                  <span className={styles.oldPrice}>₹{product.oldPrice.toLocaleString('en-IN')}</span>
-                )}
-              </div>
 
               <p className={styles.desc}>{product.description}</p>
 

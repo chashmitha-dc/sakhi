@@ -30,12 +30,9 @@ export default function ProductCard({ product, onQuickView, index = 0 }) {
   const handleWhatsAppEnquiry = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    const msg = encodeURIComponent(`Hello Sakhi Mangalore! I am interested in inquiring about "${product.name}" (Code: ${product.productCode}) priced at ₹${product.price.toLocaleString('en-IN')}. Please share availability.`);
+    const msg = encodeURIComponent(`Hello Sakhi Mangalore! I am interested in inquiring about "${product.name}" (Code: ${product.productCode}). Please share availability.`);
     window.open(`https://wa.me/919480168999?text=${msg}`, '_blank');
   };
-
-  const formattedPrice = `₹${product.price.toLocaleString('en-IN')}`;
-  const formattedOldPrice = product.oldPrice ? `₹${product.oldPrice.toLocaleString('en-IN')}` : null;
 
   return (
     <motion.div
@@ -74,9 +71,6 @@ export default function ProductCard({ product, onQuickView, index = 0 }) {
 
         {/* Badges Stack */}
         <div className={styles.badgeStack}>
-          {product.discount > 0 && (
-            <span className={styles.discountBadge}>{product.discount}% OFF</span>
-          )}
           {product.video && (
             <span className={styles.videoBadge}>
               <Play size={10} fill="currentColor" />
@@ -121,13 +115,6 @@ export default function ProductCard({ product, onQuickView, index = 0 }) {
         <Link href={`/product/${product.id}`}>
           <h3 className={styles.productName}>{product.name}</h3>
         </Link>
-
-        <div className={styles.priceRow}>
-          <span className={styles.currentPrice}>{formattedPrice}</span>
-          {formattedOldPrice && (
-            <span className={styles.oldPrice}>{formattedOldPrice}</span>
-          )}
-        </div>
 
         {/* Action Buttons */}
         <div className={styles.actionRow}>
